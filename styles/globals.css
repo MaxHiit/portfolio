@@ -1,26 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Lacquer&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './component/components.css';
+@import 'tailwindcss/utilities';
+
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+#__next {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: #fff;
+	background-color: #262525;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.title-container {
+	min-height: 300px;
+	background-color: theme('colors.primary');
+	clip-path: url(#svgTextPath);
+	filter: blur(10px);
+}
+
+.title-container svg text {
+	font-family: 'Lacquer', cursive;
+	font-size: calc(3rem + (240 - 48) * ((100vw - 375px) / (1980 - 375)));
+	letter-spacing: 0.1em;
+}
+
+.title-container--work-detail svg text {
+	font-size: calc(3rem + (70 - 20) * ((100vw - 375px) / (1980 - 375)));
+}
+
+.subtitle {
+	font-family: 'Lacquer', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: calc(28px + (60 - 28) * ((100vw - 375px) / (1980 - 375)));
+}
+
+.blur_effect {
+	filter: blur(0px);
+}
+
+.blur_effect:hover {
+	filter: blur(10px);
+}
+
+@layer utilities {
+	.main {
+		@apply flex flex-col px-5 sm:px-10 min-h-screen;
+	}
+}
+
+.img-project {
+	width: 100%;
+	height: 100%;
+	object-fit: contains;
+	filter: grayscale(1);
 }

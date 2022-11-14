@@ -1,0 +1,28 @@
+.work-item {
+	border-color: theme(colors.white);
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	font-family: 'Lacquer', cursive;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.work-item_number,
+.work-item_date {
+	font-size: calc(28px + (60 - 28) * ((100vw - 360px) / (1800 - 360)));
+}
+.work-item_title {
+	font-size: calc(28px + (60 - 28) * ((100vw - 360px) / (1800 - 360)));
+}
+
+.work-title {
+	font-family: 'Lacquer', cursive;
+	font-size: calc(3rem + (150 - 16) * ((100vw - 375px) / (1980 - 375)));
+	letter-spacing: 0.1em;
+	text-shadow: 5px 5px 3px black;
+	color: theme('colors.primary');
+	display: inline-block;
+	vertical-align: top;
+	@apply px-5 text-center;
+}

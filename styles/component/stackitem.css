@@ -1,0 +1,21 @@
+.stack-item {
+	border-color: theme(colors.white);
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	font-family: 'Lacquer', cursive;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.stack-item + .stack-item {
+	border-top-width: 0px;
+}
+
+.stack-title {
+	font-family: 'Holtwood One SC', serif;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: theme('colors.primary');
+}
